@@ -1,2 +1,2 @@
-#define WIFI_SSID "Tenda"
-#define WIFI_PASSWORD "BranFunGlin"
+#define WIFI_SSID "-"
+#define WIFI_PASSWORD "-"
