@@ -7,6 +7,7 @@
 
 #define DELAY_TOKEN_REQUEST 1000
 #define DELAY_LOOP 3000
+#define DELAY_OPEN_SLOT 60000 // 1000 * 60 - 1 minuto
 
 #define DRAWER_ID "1"
 
@@ -124,7 +125,7 @@ JSONVar getPendingRequests() {
 
 void openSlot(const int slot) {
     digitalWrite(slot, LOW);
-    while (!Serial.available()) Serial.read();
+    delay(DELAY_OPEN_SLOT);
     digitalWrite(slot, HIGH);
 }
 void dropKey(const int keyPosition) {
